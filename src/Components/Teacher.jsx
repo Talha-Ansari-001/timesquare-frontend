@@ -15,7 +15,7 @@ const Teacher = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/teachers");
+        const res = await fetch("https://your-service-name.onrender.com/teachers");
         const data = await res.json();
         setTeachers(data);
         setFilteredTeachers(data);

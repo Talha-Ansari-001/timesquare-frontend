@@ -13,7 +13,7 @@ const Student = () => {
     // Getting Data from Database
     const getData = async () => {
         try {
-            const res = await fetch("http://localhost:5000/StudentData");
+            const res = await fetch("https://your-service-name.onrender.com/StudentData");
             const data = await res.json();
             setStudents(data);
 

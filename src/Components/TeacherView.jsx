@@ -33,7 +33,7 @@ const TeacherView = () => {
     useEffect(() => {
         const load = async () => {
             try {
-                const res = await fetch("http://localhost:5000/teachers");
+                const res = await fetch("https://your-service-name.onrender.com/teachers");
                 const data = await res.json();
                 setTeachers(data);
 
@@ -127,7 +127,7 @@ const TeacherView = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/updateData", {
+            const response = await fetch("https://your-service-name.onrender.com/updateData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -152,7 +152,7 @@ const TeacherView = () => {
         console.log(formData);
 
         try {
-            const response = await fetch("http://localhost:5000/deletingTeacherData", {
+            const response = await fetch("https://your-service-name.onrender.com/deletingTeacherData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

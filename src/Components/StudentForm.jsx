@@ -66,7 +66,7 @@ const TeacherForm = () => {
 
 
         try {
-            const response = await fetch("http://localhost:5000/StudentData", {
+            const response = await fetch("https://your-service-name.onrender.com/StudentData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
