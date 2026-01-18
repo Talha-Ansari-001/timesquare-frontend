@@ -1,0 +1,7 @@
+.delete-button {
+  background: #e53935; /* red */
+}
+
+.delete-button:hover {
+  background: #c62828; /* darker red on hover */
+}

@@ -1,0 +1,435 @@
+/* ========= Layout ========= */
+.page-wrapper {
+  margin-left: 15vw; /* push content past sidebar */
+  width: calc(100% - 15vw); /* remaining width */
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.teacher-container {
+  width: 53vw;
+  /* max-width: 1100px; SAFE desktop width */
+  margin: auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: relative;
+}
+
+#tSearch {
+  display: block;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+#tView {
+  width: 53vw;
+  /* max-width: 1100px; */
+  margin: auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.56);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ========= Close button ========= */
+#cross {
+  border: none;
+  background: #ff0000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#cross:hover {
+  background: #cc0000;
+}
+
+/* Floating close button (X) */
+.floating-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7f3ff5;
+  color: #fff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+  background: #5a2cc2;
+}
+
+/* ========= Titles ========= */
+.title {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #222;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: auto;
+  margin-top: 5vh;
+}
+
+/* ========= Forms (add / view) ========= */
+.teacher-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+  width: 29vw;
+  background-color: transparent;
+  margin: 9vh 0 0 10vw;
+}
+
+.form-group {
+  flex: 0 0 calc(50% - 12px);
+  min-width: 260px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.2s ease;
+  width: 100%;
+  height: 38px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group-row,
+.form-group-row2 {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.form-group-row2 {
+  gap: 1vw;
+}
+
+.form-group-row .field {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-group-row .field label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group-row .field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group-row select {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* generic input tweaks */
+.teacher-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* small numeric fields */
+.fields {
+  width: 8vw;
+}
+
+/* selects in add/view forms */
+.selection1,
+#gender {
+  display: block;
+  height: 4vh;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.selection {
+  width: 7vw;
+  padding-left: 0.2rem;
+}
+
+/* ========= Search bar (list page) ========= */
+.teacher-search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 3vh 0 10px;
+  flex-wrap: nowrap;
+}
+
+.teacher-search-form input,
+.teacher-search-form select {
+  min-width: 170px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.teacher-search-form button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Search / Clear / Add colors */
+.teacher-search-form button:nth-of-type(1) {
+  background: #2575fc;
+  color: #fff;
+}
+
+.teacher-search-form button:nth-of-type(2) {
+  background: #666;
+  color: #fff;
+}
+
+.teacher-search-form .add-btn,
+.teacher-search-form button:nth-of-type(3) {
+  background: #6a11cb;
+  color: #fff;
+}
+
+/* ========= Primary buttons ========= */
+.submit-button {
+  margin-top: 25px;
+  padding: 12px 0;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 150px;
+  align-self: flex-start;
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Delete button style */
+.delete-button {
+  margin-top: 25px;
+  padding: 12px 0;
+  background: linear-gradient(45deg, #e53935, #ff5252);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 150px;
+  align-self: flex-start;
+}
+
+.delete-button:hover {
+  background: linear-gradient(45deg, #c62828, #f44336);
+}
+
+/* generic buttons inside forms (when not using search bar) */
+.teacher-form button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ========= Table ========= */
+.teacherData {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.teacher-table {
+  width: 60%;
+  border-collapse: collapse;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.teacher-table thead {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.teacher-table th,
+.teacher-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.teacher-table th {
+  font-weight: 600;
+  color: #444;
+}
+
+.teacher-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9ee;
+}
+
+.teacher-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f963;
+}
+
+.teacher-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* View button */
+.view-btn {
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #2575fc;
+  background: #ffffff;
+  color: #2575fc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+  background: #2575fc;
+  color: #ffffff;
+}
+
+.view-btn:active {
+  transform: scale(0.97);
+}
+
+/* ========= Misc ========= */
+#field {
+  display: block;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 900px) {
+  .page-wrapper {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 10px;
+  }
+
+  .teacher-container {
+    max-width: 90vw;
+    padding: 25px 20px;
+  }
+
+  .teacher-form {
+    gap: 1.5rem 1rem;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .floating-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .teacher-search-form {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .teacher-search-form input,
+  .teacher-search-form select {
+    flex: 1 1 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacher-form {
+    flex-wrap: wrap;
+  }
+
+  .teacher-form input {
+    flex: 1 1 100%;
+  }
+
+  .teacher-form button {
+    flex: 1 1 48%;
+  }
+}

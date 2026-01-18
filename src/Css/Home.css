@@ -1,0 +1,105 @@
+#main {
+  margin-left: 15vw;
+  padding: 2vh 3vw;
+}
+
+
+
+/* Dashboard heading */
+.hd {
+  font-size: 3vh;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+/* Card container */
+#outer-box {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  padding-top: 2vh;
+  flex-wrap: wrap;
+}
+
+/* Base card style */
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem 1.5rem;
+  width: 16vw;
+  min-width: 190px;
+  height: 8vh;
+  min-height: 90px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Highlight first card */
+.primary-box {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #ffffff;
+  border: none;
+}
+
+hr.style-five {
+  border: 0;
+  height: 0; /* Firefox... */
+  box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {
+  /* Not really supposed to work, but does */
+  content: "\00a0"; /* Prevent margin collapse */
+}
+
+/* Hover effect */
+.boxes:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Text inside cards */
+.box-title {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.box-value {
+  margin-top: 0.35rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#outer-box:hover {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #main {
+    margin-left: 0;
+    padding: 2vh 4vw;
+  }
+
+  #outer-box {
+    justify-content: center;
+  }
+
+  .boxes {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .boxes {
+    width: 100%;
+  }
+}

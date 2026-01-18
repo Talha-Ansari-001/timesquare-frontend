@@ -1,0 +1,101 @@
+.mainContainer {
+  margin-left: 15vw;
+}
+
+.mg-15 {
+  width: 53vw;
+  margin: auto;
+}
+
+.pt-44 {
+  padding-top: 4vh;
+}
+
+select {
+  width: 14vw;
+  padding-left: 1vh;
+}
+
+/* Batch students table */
+.batch-table {
+  width: 29vw;
+  margin-top: 32px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+  margin: auto;
+  margin-top: 3vh;
+}
+
+/* Header */
+.batch-table thead {
+  background: linear-gradient(90deg, #eef2ff, #e0f2fe);
+}
+
+.batch-table th {
+  padding: 10px 16px;
+  font-weight: 600;
+  color: #1f2933;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Body */
+.batch-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #edf2f7;
+  color: #374151;
+}
+
+.batch-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.batch-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.batch-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* First / last column widths */
+.batch-table th:first-child,
+.batch-table td:first-child {
+  width: 60px;
+  color: #6b7280;
+}
+
+.batch-table th:last-child,
+.batch-table td:last-child {
+  text-align: center;
+  width: 120px;
+}
+
+/* Remove button */
+.remove-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #ef4444;
+  background: #fff;
+  color: #ef4444;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.batch-bottom {
+  display: flex;
+  flex-direction: column; /* table on top, button below */
+  gap: 16px;
+}

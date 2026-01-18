@@ -1,0 +1,54 @@
+#SidebarStyle {
+  background: linear-gradient(
+    to bottom,
+    #0a0a14 0%,
+    /* very dark navy - top */ #111127 50%,
+    /* dark midnight blue - middle */ #1a1a3f 80%,
+    /* deep muted blue - lower middle */ #2c2c61 100%
+      /* subtle bright accent - bottom */
+  );
+  color: wheat;
+  float: left;
+  height: 100vh;
+  width: 15vw;
+  padding: 2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+}
+#SidebarStyle a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#SidebarStyle a:hover {
+  color: #7f3ff5;
+  text-shadow: 0 0 8px #7f3ff5, 0 0 16px #3f1df5;
+}
+
+hr {
+  width: inherit;
+}
+
+#SidebarStyle a.toLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#SidebarStyle a.toLink svg {
+  font-size: 16px;
+  min-width: 16px;
+  vertical-align: middle;
+}

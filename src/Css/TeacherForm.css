@@ -1,0 +1,164 @@
+/* Page wrapper */
+.page-wrapper {
+  margin-left: 15vw;
+  width: calc(100% - 15vw);
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#tForm {
+  width: 53vw;
+  /* max-width: 1100px; SAFE desktop width */
+  margin: auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.56);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+
+/* Teacher container */
+.teacher-container {
+  width: 53vw;
+  /* max-width: 1100px; */
+  background: #ffffff;
+  padding: 30px 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Form wrapper */
+.teacher-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+  width: 35vw;
+  margin: 9vh 0 0 10vw;
+}
+
+/* Form groups */
+.form-group {
+  flex: 0 0 calc(50% - 12px);
+  min-width: 260px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  height: 38px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Row layouts */
+.form-group-row {
+  display: flex;
+  gap: 24px;
+}
+
+.form-group-row2 {
+  display: flex;
+  gap: 1vw;
+}
+
+.field {
+  flex: 1;
+}
+
+/* Select fields */
+#selection1,
+#gender {
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Smaller number inputs */
+.fields {
+  width: 8vw;
+}
+
+/* Submit button */
+.submit-button {
+  margin-top: 25px;
+  padding: 12px 0;
+  width: 150px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Floating close button */
+.floating-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7f3ff5;
+  color: #fff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.floating-btn:hover {
+  background: #5a2cc2;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .teacher-form {
+    width: 100%;
+    margin: 4vh 0 0 0;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .page-wrapper {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 10px;
+  }
+}
