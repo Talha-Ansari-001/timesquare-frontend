@@ -15,7 +15,7 @@ const AddBatch = () => {
     // Get Teachers Data
     useEffect(() => {
         const getTeachers = async () => {
-            let response = await fetch("https://your-service-name.onrender.com/teachers");
+            let response = await fetch("https://timesquare-backend.onrender.com/teachers");
             response = await response.json();
             setTeachers(response);
         };
@@ -25,7 +25,7 @@ const AddBatch = () => {
 
     async function gettingStudents(Course) {
         console.log(Course);
-        const res = await fetch("https://your-service-name.onrender.com/StudentData");
+        const res = await fetch("https://timesquare-backend.onrender.com/StudentData");
         const data = await res.json();
         const result = data.filter(e => e.Course === Course);
         setStudents(result);

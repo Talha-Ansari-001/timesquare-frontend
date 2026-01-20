@@ -18,7 +18,7 @@ const Login = () => {
                 password: password.trim(),
             }
             console.log(loginData);
-            const res = await fetch("https://your-service-name.onrender.com/login")
+            const res = await fetch("https://timesquare-backend.onrender.com/login")
             const data = await res.json();
             console.log(data);
             const result = data.filter(e => e.Username === username && e.Password === password);

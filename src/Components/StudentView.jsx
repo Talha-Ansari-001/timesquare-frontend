@@ -33,7 +33,7 @@ const TeacherView = () => {
     useEffect(() => {
         const load = async () => {
             try {
-                const res = await fetch("https://your-service-name.onrender.com/StudentData");
+                const res = await fetch("https://timesquare-backend.onrender.com/StudentData");
                 const data = await res.json();
                 setStudent(data);
                 // ensure types match: convert both to numbers
@@ -130,7 +130,7 @@ const TeacherView = () => {
         }
 
         try {
-            const response = await fetch("https://your-service-name.onrender.com/updateStudentData", {
+            const response = await fetch("https://timesquare-backend.onrender.com/updateStudentData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -171,7 +171,7 @@ const TeacherView = () => {
         console.log(formData);
 
         try {
-            const response = await fetch("https://your-service-name.onrender.com/deletingStudentData", {
+            const response = await fetch("https://timesquare-backend.onrender.com/deletingStudentData", {
                 method: "POST",              
                 headers: {
                     "Content-Type": "application/json",

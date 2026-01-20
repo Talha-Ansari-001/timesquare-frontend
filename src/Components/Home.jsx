@@ -6,8 +6,8 @@ const Home = () => {
 
   useEffect(() => {
     const load = async () => {
-      let teacherRes = await fetch("https://your-service-name.onrender.com/teachers");
-      let studentRes = await fetch("https://your-service-name.onrender.com/StudentData");
+      let teacherRes = await fetch("https://timesquare-backend.onrender.com/teachers");
+      let studentRes = await fetch("https://timesquare-backend.onrender.com/StudentData");
       teacherRes = await teacherRes.json();
       studentRes = await studentRes.json();
       setStudents(studentRes.length);

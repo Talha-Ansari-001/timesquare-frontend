@@ -54,7 +54,7 @@ const TeacherForm = () => {
         }
 
         try {
-            const response = await fetch("https://your-service-name.onrender.com/teacherData", {
+            const response = await fetch("https://timesquare-backend.onrender.com/teacherData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
